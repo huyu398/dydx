@@ -33,21 +33,21 @@ describe Dydx:Integrand do
     expect(S(f(x), dx)[0, 1]).to eq(-oo)
   end
 
-  it 'ex6' do
-    f(x) <= e ^ (- (x ^ 2))
-    expect(f(0)).to eq(1)
-    expect(f(1)).to eq(1.0/Math::E)
-    expect(f(1000)).to eq(0)
-    expect(S(f(x), dx)[-1000, 1000, 3000]).to eq(1.7724538506374117)
-  end
+  # it 'ex6' do
+  #   f(x) <= e ^ (- (x ^ 2))
+  #   expect(f(0)).to eq(1)
+  #   expect(f(1)).to eq(1.0/Math::E)
+  #   expect(f(1000)).to eq(0)
+  #   expect(S(f(x), dx)[-1000, 1000, 3000]).to eq(1.7724538506374117)
+  # end
 
-  it 'ex7' do
-    f(x) <= (1.0 / ( ( 2.0 * Math::PI ) ^ 0.5 ) ) * ( e ^ (- (x ^ 2) / 2) )
-    expect(S(f(x), dx)[-1000, 1000, 1000]).to eq(0.9952054164466917)
-  end
+  # it 'ex7' do
+  #   f(x) <= (1.0 / ( ( 2.0 * Math::PI ) ^ 0.5 ) ) * ( e ^ (- (x ^ 2) / 2) )
+  #   expect(S(f(x), dx)[-1000, 1000, 1000]).to eq(0.9952054164466917)
+  # end
 
-  it 'ex8' do
-    f(x) <= (1.0 / ( ( 2.0 * pi ) ^ 0.5 ) ) * ( e ^ (- (x ^ 2) / 2) )
-    expect(S(f(x), dx)[-oo, oo, 1000]).to eq(0.9952054164466917)
-  end
+  # it 'ex8' do
+  #   f(x) <= (1.0 / ( ( 2.0 * pi ) ^ 0.5 ) ) * ( e ^ (- (x ^ 2) / 2) )
+  #   expect(S(f(x), dx)[-oo, oo, 1000]).to eq(0.9952054164466917)
+  # end
 end

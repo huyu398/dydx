@@ -55,6 +55,10 @@ describe Helper do
     it{ expect(distributive?(:^, :*)).to be_false }
   end
 
+  context '#formula?' do
+    it{ expect((x + y).formula?(:+)).to be_true }
+  end
+
   let(:addition)      { (:x + :y) }
   let(:subtraction)   { (:x - :y) }
   let(:multiplication){ (:x * :y) }

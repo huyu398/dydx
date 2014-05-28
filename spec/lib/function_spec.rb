@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Dydx:Function do
   # TODO: refactor
-  it{ expect(f(x, y)).to eq(f(x, y)) }
+  it{ binding.pry; expect(f(x, y)).to eq(f(x, y)) }
   it{ expect(f(x, y)).to eq($f) }
   it{ expect(f(x, y).algebra).to be_nil }
   it{ expect(f(x, y).vars).to eq([:x, :y]) }

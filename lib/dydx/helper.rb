@@ -125,7 +125,8 @@ module Dydx
     end
 
     def formula?(operator)
-      is_a?(Formula) && (@operator == operator)
+      (is_a?(Formula) && (@operator == operator)) ||
+      ([:*, :^].include?(operator) && inverse?(sub_ope(operator)) && x.formula?(operator))
     end
 
     Symbol.class_eval do
